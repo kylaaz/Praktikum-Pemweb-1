@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas 9.4</title>
+  </head>
+  <body>
+    <h2>Menghitung jumlah dua bilangan</h2>
+
+    <form>
+      <input type="number" id="bilangan1" onchange="hitung_hasil();" />
+      <br />
+      +
+      <br />
+      <input type="number" id="bilangan2" onchange="hitung_hasil();" />
+      <br />
+      =
+      <br />
+      <input type="number" id="hasil" readonly />
+    </form>
+
+    <script>
+      function hitung_hasil() {
+        let bilangan1 = document.getElementById("bilangan1").value;
+        let bilangan2 = document.getElementById("bilangan2").value;
+
+        let hasilPertambahan = parseFloat(bilangan1) + parseFloat(bilangan2);
+
+        document.getElementById("hasil").value = hasilPertambahan;
+      }
+    </script>
+  </body>
+</html>
